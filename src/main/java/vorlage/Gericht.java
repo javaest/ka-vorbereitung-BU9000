@@ -1,6 +1,12 @@
 package vorlage;
 
 public class Gericht {
+	
+	private String name;
+    private String beschreibung;
+    private double preis;
+    
+    
     public Gericht(String name, String beschreibung, double preis) {
 		super();
 		this.name = name;
@@ -28,9 +34,7 @@ public class Gericht {
         }
         this.preis = preis;
     }
-	private String name;
-    private String beschreibung;
-    private double preis;
+	
 
     // Konstruktor, Getter und Setter
 }

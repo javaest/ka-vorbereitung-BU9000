@@ -5,12 +5,12 @@ import java.util.Date;
 import java.util.List;
 
 public class Bestellung {
-    private int bestellnummer;
-    private Date bestelldatum;
-    private List<Gericht> gerichte;
-    private Kunde kunde;
-    private Kellner kellner;
-    private double gesamtbetrag;
+    int bestellnummer;
+    Date bestelldatum;
+    List<Gericht> gerichte;
+    Kunde kunde;
+    Kellner kellner;
+    double gesamtbetrag;
 
     // Konstruktor, Getter und Setter
 
@@ -23,8 +23,11 @@ public class Bestellung {
   
     }
 
-    public void gesamtbetragBerechnen() {
-   
+    public double gesamtbetragBerechnen(double gesamtbetrag) {
+
+    	
+    	this.gesamtbetrag = gesamtbetrag;
+    	return gesamtbetrag;
     }
 
 	public Bestellung(int bestellnummer, Date bestelldatum, Kunde kunde, Kellner kellner) {
@@ -35,4 +38,26 @@ public class Bestellung {
 		this.kunde = kunde;
 		this.kellner = kellner;
 	}
+	
+	public int bestellnummer() {
+		return bestellnummer;
+	}
+	
+	public Date bestelldatum() {
+		return bestelldatum;
+	}
+	
+	public Kunde getKunde() {
+		return kunde;
+	}
+	
+	public Kellner getKellner() {
+		return kellner;
+	}
+	
+	public List<Gericht> getGerichte() {
+		return gerichte;
+	
+	
+    }
 }

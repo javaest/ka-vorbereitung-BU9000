@@ -16,6 +16,7 @@ public class BestellungTest {
     public void testBestellungConstructor() {
         Kunde kunde = new Kunde("Max Mustermann", 1);
         Kellner kellner = new Kellner("Anna Schmidt", 101);
+   
         Bestellung bestellung = new Bestellung(1, new Date(), kunde, kellner);
 
         assertEquals(1, bestellung.bestellnummer());
